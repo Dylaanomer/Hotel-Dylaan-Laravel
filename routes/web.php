@@ -23,8 +23,16 @@ Route::get('/my-page', function () {
     return view('my-page');
 });
 
-Route::get('/kamers', function () {
-    return view('kamers');
+Route::get('/create', function () {
+    return view('kamer.create');
+});
+
+Route::get('/index', function () {
+    return view('kamer.index');
+});
+
+Route::get('/voorbeeld', function () {
+    return view('pages.voorbeeld');
 });
 
 Route::get('/hotels', function () {
@@ -36,8 +44,5 @@ Route::get('/hotels', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/pages', [App\Http\Controllers\PagesController::class, 'index'])->name('index');
-Route::get('/kamer', [App\Http\Controllers\KamerController::class, 'index'])->name('index');
-
 
 

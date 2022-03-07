@@ -1,9 +1,18 @@
 @extends('layouts.app')
 
-@section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <h1>Hotel Kamer Hotel</h1>
-        </div>
-    </div>
-@endsection
+<table class="table">
+    <tbody>
+    <th>
+        <th>Naam</th>
+        <th>Kamernummer</th>
+        <th>datum</th>
+        <th>adress</th>
+        <th>type-kamer</th>
+        <th>aantal-personen</th>
+        <th>prijs</th>
+        <th>minibar</th>
+        <th>bad</th>
+        <th>Oppervlakte</th>
+    </th>
+    </tbody>
+</table>
