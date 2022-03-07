@@ -19,19 +19,25 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/pages',
-[PagesController::class, 'index']);
+Route::get('/my-page', function () {
+    return view('my-page');
+});
 
-Route::get('/kamers',
-    [KamerController::class, 'index']);
+Route::get('/kamers', function () {
+    return view('kamers');
+});
 
-Route::resource(name: 'boekingen',controller: 'BoekingController');
+Route::get('/hotels', function () {
+    return view('hotels');
+});
 
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/pages', [App\Http\Controllers\PagesController::class, 'index'])->name('index');
+Route::get('/kamer', [App\Http\Controllers\KamerController::class, 'index'])->name('index');
 
 
 
