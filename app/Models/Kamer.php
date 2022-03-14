@@ -5,21 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Kamer extends Model
 {
     use HasFactory;
 
-    protected $table = 'products';
+    protected $table = 'kamers';
     public $timestamps = true;
 
     protected $casts = [
-        'price' => 'float'
+        'prijs' => 'float'
     ];
 
     protected $fillable = [
-        'name',
+        'naam',
         'description',
-        'price',
-        'created_at'
+        'prijs',
+        'adress',
+        'type-kamer',
+        'Aantal-personen',
+        'minibar',
+        'created_at',
+        'updated-at'
     ];
 }
